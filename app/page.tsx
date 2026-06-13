@@ -1,7 +1,10 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-[calc(100vh-3rem)] items-center justify-center">
-      <h1 className="text-sm font-medium text-muted-foreground">ghost AI</h1>
-    </main>
-  )
+import { auth } from "@clerk/nextjs/server"
+import { redirect } from "next/navigation"
+
+import { authRoutes } from "@/lib/clerk"
+
+export default async function Home() {
+  const { userId } = await auth()
+
+  redirect(userId ? authRoutes.afterSignIn : authRoutes.signIn)
 }

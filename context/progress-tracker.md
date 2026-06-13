@@ -4,13 +4,13 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Editor Shell Setup
+- Authentication Setup
 
 ## Current Goal
 
-- Build reusable editor navbar and floating project sidebar chrome
-- Use shadcn/ui primitives and lucide-react icons
-- Keep dialog styling pattern ready through existing token-based Dialog components
+- Wire Clerk into the Next.js app with provider, auth pages, proxy route protection, redirects, and user menu
+- Use Clerk dark theme from `@clerk/ui/themes` with app CSS variables
+- Protect all routes except configured sign-in and sign-up paths
 
 ## Completed
 
@@ -20,6 +20,7 @@ Update this file whenever the current phase, active feature, or implementation s
 ## In Progress
 
 - Initial page cleanup (page.module.css removal and minimal page component) - COMPLETE
+- Clerk auth implementation: provider, auth pages, proxy protection, redirects, and navbar user menu
 
 
 ## Next Up
