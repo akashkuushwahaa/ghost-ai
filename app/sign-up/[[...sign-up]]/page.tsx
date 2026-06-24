@@ -5,10 +5,7 @@ import { authRoutes, clerkAppearance } from "@/lib/clerk"
 
 export default function SignUpPage() {
   return (
-    <AuthPageShell
-      title="Create your workspace"
-      tagline="Start with a clean editor shell and keep your projects organized."
-    >
+    <AuthPageShell>
       <SignUp
         appearance={clerkAppearance}
         routing="path"

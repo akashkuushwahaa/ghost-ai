@@ -1,9 +1,11 @@
 "use client"
 
 import { useState, type ReactNode } from "react"
+import { usePathname } from "next/navigation"
 
 import { EditorNavbar } from "@/components/editor/editor-navbar"
 import { ProjectSidebar } from "@/components/editor/project-sidebar"
+import { authRoutes } from "@/lib/clerk"
 
 type EditorLayoutProps = {
   children: ReactNode
@@ -11,6 +13,16 @@ type EditorLayoutProps = {
 
 function EditorLayout({ children }: EditorLayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const pathname = usePathname()
+  const isAuthRoute =
+    pathname === authRoutes.signIn ||
+    pathname.startsWith(`${authRoutes.signIn}/`) ||
+    pathname === authRoutes.signUp ||
+    pathname.startsWith(`${authRoutes.signUp}/`)
+
+  if (isAuthRoute) {
+    return children
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground">

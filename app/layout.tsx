@@ -32,17 +32,17 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
-      <ClerkProvider
-        appearance={clerkAppearance}
-        signInUrl={authRoutes.signIn}
-        signUpUrl={authRoutes.signUp}
-        signInFallbackRedirectUrl={authRoutes.afterSignIn}
-        signUpFallbackRedirectUrl={authRoutes.afterSignUp}
-      >
-        <body className="min-h-full">
+      <body className="min-h-full">
+        <ClerkProvider
+          appearance={clerkAppearance}
+          signInUrl={authRoutes.signIn}
+          signUpUrl={authRoutes.signUp}
+          signInFallbackRedirectUrl={authRoutes.afterSignIn}
+          signUpFallbackRedirectUrl={authRoutes.afterSignUp}
+        >
           <EditorLayout>{children}</EditorLayout>
-        </body>
-      </ClerkProvider>
+        </ClerkProvider>
+      </body>
     </html>
   );
 }

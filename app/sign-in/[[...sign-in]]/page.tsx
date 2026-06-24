@@ -5,10 +5,7 @@ import { authRoutes, clerkAppearance } from "@/lib/clerk"
 
 export default function SignInPage() {
   return (
-    <AuthPageShell
-      title="Welcome back"
-      tagline="Sign in to continue to your editor workspace."
-    >
+    <AuthPageShell>
       <SignIn
         appearance={clerkAppearance}
         routing="path"
