@@ -4,22 +4,22 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Editor Shell Setup
+- Editor Data + Project Workflows
 
 ## Current Goal
 
-- Build reusable editor navbar and floating project sidebar chrome
-- Use shadcn/ui primitives and lucide-react icons
-- Keep dialog styling pattern ready through existing token-based Dialog components
+- Extend editor chrome with real project data and dialogs when specified.
 
 ## Completed
 
 - Design system implementation: shadcn/ui configured with Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea; lucide-react installed; cn() helper present; dark theme globals applied
 - Editor shell implementation: fixed editor navbar, floating project sidebar, shadcn tabs, empty states, and bottom New Project action
+- Authentication setup: ClerkProvider wired with Clerk dark theme and app CSS variables; sign-in/sign-up pages implemented; root redirects configured; proxy protection added for all non-auth routes; editor navbar uses Clerk UserButton; `@clerk/ui` lockfile dependency installed
 
 ## In Progress
 
 - Initial page cleanup (page.module.css removal and minimal page component) - COMPLETE
+- No active implementation task.
 
 
 ## Next Up
@@ -40,3 +40,4 @@ Update this file whenever the current phase, active feature, or implementation s
 - Verification passed: `npm run lint`, `npm run build`, and `npm exec shadcn -- info`.
 - Editor shell verification passed: `npm run lint` and `npm run build`.
 - Layout integration verification passed: `npm run lint` and `npm run build`.
+- Auth implementation verification passed: `npm run lint` and `npm run build`.
